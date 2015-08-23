@@ -10,7 +10,6 @@
       <change type="DELETED" beforePath="G:\CZY\MYPROGRAM\JAVA\插件forIdea\LoreAttributes\src\main\java\com\settingdust\loreattr\LoreManager.java" afterPath="" />
       <change type="DELETED" beforePath="G:\CZY\MYPROGRAM\JAVA\插件forIdea\LoreAttributes\src\main\resources\config.yml" afterPath="" />
       <change type="DELETED" beforePath="G:\CZY\MYPROGRAM\JAVA\插件forIdea\LoreAttributes\src\main\resources\plugin.yml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="LoreAttributes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -511,7 +510,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8758000" />
+    <option name="totallyTimeSpent" value="8951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="1002" extended-state="1" />
