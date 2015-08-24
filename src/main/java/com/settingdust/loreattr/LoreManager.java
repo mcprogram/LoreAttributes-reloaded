@@ -412,11 +412,9 @@ public class LoreManager {
         Integer hpToAdd = getHpBonus(entity);
 
         if ((entity instanceof Player)) {
-            if (entity.getHealth() > getBaseHealth((Player) entity) + hpToAdd) {
-                entity.setHealth(getBaseHealth((Player) entity) + hpToAdd);
-            }
+            entity.setMaxHealth(entity.getMaxHealth() + hpToAdd);
+            entity.setHealth(entity.getMaxHealth() + hpToAdd);
 
-            entity.setMaxHealth(getBaseHealth((Player) entity) + hpToAdd);
         }
     }
 
