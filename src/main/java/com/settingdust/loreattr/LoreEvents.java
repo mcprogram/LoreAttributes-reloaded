@@ -19,30 +19,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class LoreEvents
         implements Listener {
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void applyOnInventoryClose(InventoryCloseEvent event) {
-        if ((event.getPlayer() instanceof Player))
-            LoreAttributes.loreManager.handleArmorRestriction((Player) event.getPlayer());
-    }
-
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void applyOnPlayerLogin(PlayerJoinEvent event) {
-        LoreAttributes.loreManager.applyHpBonus(event.getPlayer());
-    }
-
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void applyOnPlayerRespawn(PlayerRespawnEvent event) {
-        LoreAttributes.loreManager.applyHpBonus(event.getPlayer());
-    }
-
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void applyOnEntityTarget(EntityTargetEvent event) {
-        if ((event.getEntity() instanceof LivingEntity)) {
-            LivingEntity e = (LivingEntity) event.getEntity();
-
-            LoreAttributes.loreManager.applyHpBonus(e);
-        }
-    }
 
     @EventHandler(priority = EventPriority.HIGH)
     public void modifyEntityDamage(EntityDamageByEntityEvent event) {
@@ -60,14 +36,14 @@ public class LoreEvents
             LivingEntity damager = (LivingEntity) event.getDamager();
 
             if ((damager instanceof Player)) {
-                if (LoreAttributes.loreManager.canAttack(((Player) damager).getName())) {
-                    LoreAttributes.loreManager.addAttackCooldown(((Player) damager).getName());
+                if (LoreAttributes.loreManager.canAttack(damager.getName())) {
+                    LoreAttributes.loreManager.addAttackCooldown(damager.getName());
                 } else {
                     if (!LoreAttributes.config.getBoolean("lore.attack-speed.display-message")) {
                         event.setCancelled(true);
                         return;
                     }
-                    ((Player) damager).sendMessage(LoreAttributes.config.getString("lore.attack-speed.message"));
+                    damager.sendMessage(LoreAttributes.config.getString("lore.attack-speed.message"));
                     event.setCancelled(true);
                     return;
                 }
@@ -87,14 +63,14 @@ public class LoreEvents
                 LivingEntity damager = (LivingEntity) arrow.getShooter();
 
                 if ((damager instanceof Player)) {
-                    if (LoreAttributes.loreManager.canAttack(((Player) damager).getName())) {
-                        LoreAttributes.loreManager.addAttackCooldown(((Player) damager).getName());
+                    if (LoreAttributes.loreManager.canAttack(damager.getName())) {
+                        LoreAttributes.loreManager.addAttackCooldown(damager.getName());
                     } else {
                         if (!LoreAttributes.config.getBoolean("lore.attack-speed.display-message")) {
                             event.setCancelled(true);
                             return;
                         }
-                        ((Player) damager).sendMessage(LoreAttributes.config.getString("lore.attack-speed.message"));
+                        damager.sendMessage(LoreAttributes.config.getString("lore.attack-speed.message"));
                         event.setCancelled(true);
                         return;
                     }

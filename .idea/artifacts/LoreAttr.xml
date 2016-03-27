@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="LoreAttr">
-    <output-path>$PROJECT_DIR$/../../../MCP/CraftBukkit-1.7.10/plugins</output-path>
+    <output-path>F:/Minecraft/Server/spigot-1.8.8/plugins</output-path>
     <root id="archive" name="LoreAttr.jar">
       <element id="module-output" name="LoreAttributes-reloaded" />
     </root>
