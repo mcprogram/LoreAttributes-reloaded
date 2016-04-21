@@ -1,5 +1,5 @@
 name: LoreAttributes
-main: com.settingdust.loreatt.LoreAttributes
+main: com.settingdust.loreattr.LoreAttributes
 version: 1.4.0
 description: Apply stats to weapons and armor!
 authors: [Nighteyes604,LordPhrozen,SettingDust]
