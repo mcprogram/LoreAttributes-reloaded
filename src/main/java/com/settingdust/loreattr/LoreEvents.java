@@ -7,14 +7,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.EntityShootBowEvent;
-import org.bukkit.event.entity.EntityTargetEvent;
 import org.bukkit.event.inventory.CraftItemEvent;
-import org.bukkit.event.inventory.InventoryCloseEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class LoreEvents
@@ -88,9 +83,6 @@ public class LoreEvents
         }
     }
 
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void damage(EntityDamageEvent event) {
-    }
 
     @EventHandler(priority = EventPriority.NORMAL)
     public void applyHealthRegen(EntityRegainHealthEvent event) {
